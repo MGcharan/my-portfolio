@@ -4,7 +4,7 @@ import IMG1 from '../../assets/port1.png'
  import IMG2 from '../../assets/port2.png'
 import IMG3 from '../../assets/port3.png'
 import IMG4 from '../../assets/port4.png'
-// import IMG5 from '../../assets/portfolio5.jpg'
+import IMG5 from '../../assets/interview img.png'
 // import IMG6 from '../../assets/portfolio6.jpg'
 
 
@@ -16,6 +16,23 @@ const Achievement = () => {
 
       <div className="container achievement__container">
         
+
+      <article className='achievement__item'>
+          <div className="achievement__item-image">
+            <img src={IMG5} alt="" />
+          </div>
+          <h3>Customize Interview Questions </h3>
+          <div className="achievement__item-cta">
+          <a href="https://github.com/MGcharan/interview-questions.git" className='btn btn-1 ' target='_blank'>Code</a>
+          </div>
+        </article>
+
+
+
+
+
+
+
         <article className='achievement__item'>
           <div className="achievement__item-image">
             <img src={IMG1} alt="" />
@@ -23,7 +40,7 @@ const Achievement = () => {
           <h3>Github Tracker </h3>
           <div className="achievement__item-cta">
           <a href="https://giri-git-tracker.netlify.app" className='btn' target='_blank'>View</a>
-          <a href="https://github.com/MGcharan/GitTracker.git://github.com/MGcharan/mini-game.git" className='btn btn-1 ' target='_blank'>Code</a>
+          <a href="https://github.com/MGcharan/GitTracker.git" className='btn btn-1 ' target='_blank'>Code</a>
           </div>
         </article>
 

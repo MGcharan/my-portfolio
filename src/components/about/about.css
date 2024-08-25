@@ -1,25 +1,7 @@
 .about_container {
     display: grid;
-   
+    
 }
-
-/* .about_me {
-    width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 2rem;
-    background: linear-gradient(
-        45deg,
-        transparent,
-        var(--color-myphoto),
-        transparent
-        );
-        display: grid;
-        place-items: center;
-} */
-
-
-
-
 
 .about_content p {
     margin: 1rem;
@@ -28,42 +10,88 @@
     margin-bottom: 50px !important; 
 }
 
-.btn-1{
-    text-align: center !important;
-    margin-left: 40% !important;
+.heading {
+    text-align: center;
+    margin-bottom: 20px !important;
+    position: relative;
+    bottom: 5px;
 }
 
+.highlight {
+    color: yellow;
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(10, end) infinite, blink-caret 0.75s step-end infinite;
+    border-right: 2px solid yellow; /* Adding a blinking cursor */
+}
 
-/* ===================== Media Queries (Medium Device) ====================== */
+/* Keyframes for typing effect */
+@keyframes typing {
+    0% { width: 0; }
+    50% { width: 10ch; } /* 'Giricharan' has 10 characters */
+    100% { width: 0; } /* Reset to 0 for looping */
+}
+
+/* Keyframes for cursor blinking */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: yellow; }
+}
+
+.btn-2  {
+    display: block;
+    margin-left: 45%;
+    justify-content: center !important;
+    text-align: center !important;
+    background: rgb(253, 219, 1);
+    color: rgb(0, 0, 0) !important;
+    padding: 0.75rem 1.5rem;
+}
+
+.btn-about{
+    position: relative;
+    bottom: 25px;
+}
+
+/* Media Queries (Medium Device) */
 @media screen and (max-width: 1024px) {
-    .about_container{
+    .about_container {
         grid-template-columns: 1fr;
         gap: 0;
     }
-    .about_me{
+    .about_me {
         width: 50%;
         margin: 2rem auto 4rem;
     }
     .about_content p {
         margin: 1rem 0 1.5rem;
+        
     }
 }
- 
 
-/* ===================== Media Queries (Small Device) ====================== */
+/* Media Queries (Small Device) */
 @media screen and (max-width: 600px) {
     .about_me {
         width: 65%;
         margin: 0 auto 3rem;
     }
-    .about_card{
+    .about_card {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
     .about_content {
         text-align: center;
     }
-    .about_content p{
+    .about_content p {
         margin: 1.5rem 0;
+    }
+    .highlight {
+        animation: typing 3s steps(10, end) infinite, blink-caret 0.75s step-end infinite;
+    }
+    .btn-2 {
+        text-align: center !important;
     }
 }
